@@ -1,0 +1,16 @@
+html
+  head
+    title
+      | Jyrnyl
+    link(rel='stylesheet' href='stylesheets/main.css')
+  body
+    #counter.text.below 100
+    each val, index in entries
+      .day(id=index+'dd')
+        .info.text
+          | #{val.date}
+        p.display.text(id=index+'dt')
+          | #{val.body}
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js')
+    script(src='javascripts/main.js')
